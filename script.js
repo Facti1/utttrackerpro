@@ -32,3 +32,26 @@ function calculate() {
         resultBox.style.transition = "1s";
     }, 100);
 }
+
+
+
+function pigaPichaWageni() {
+   
+    const namespace = "mzee-wa-code-123"; 
+    const key = "utt-tracker-visit";
+
+    fetch(`https://api.countapi.xyz{namespace}/${key}`)
+        .then(res => res.json())
+        .then(res => {
+           
+            document.getElementById('count').innerText = res.value.toLocaleString();
+        })
+        .catch(err => {
+            console.error("Counter imegoma kidogo:", err);
+            document.getElementById('count').innerText = "1,000+"; 
+        });
+}
+
+
+window.onload = pigaPichaWageni;
+
