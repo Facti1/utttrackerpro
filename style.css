@@ -1,3 +1,4 @@
+
 :root {
   --gold: #d4af37;
   --dark: #1a1a1a;
@@ -38,3 +39,9 @@ button {
 }
 
 button:hover { background: #b8962e; transform: scale(1.02); }
+
+@media(max-width: 800px){
+  .counter-container{
+    display: none;
+  }
+}
